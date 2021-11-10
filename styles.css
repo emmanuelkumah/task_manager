@@ -1,0 +1,35 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f5f5;
+  color: #0d0c22;
+  min-height: 100vh;
+}
+header,
+.todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  min-height: 20vh;
+}
+header {
+  padding: 2rem;
+  margin: 2rem 0 2rem;
+}
+input[type="text"],
+button {
+  font-size: 2rem;
+  padding: 0.8rem;
+  /* border: none; */
+}
+button {
+  background: red;
+  border: none;
+  /* border-radius: 50%; */
+}
