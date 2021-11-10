@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a7be345214.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
 
     <title>Task Manager</title>
 </head>
@@ -16,9 +20,14 @@
     <main>
         <section>
             <form class="todo-form">
-                <input type="text" name="" id="">
-                <button type="submit"><i class="fas fa-plus-circle"></i></button>
+                <input type="text" name="" id="todo-input">
+                <button type="submit" id="todo-btn" class="submit-btn"><i class="fas fa-plus-circle"></i></button>
             </form>
+        </section>
+        <section class="todo-container">
+           <ul class="todo-lists">
+
+           </ul>
         </section>
     </main>
     <script src="app.js"></script>
