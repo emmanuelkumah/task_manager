@@ -1,9 +1,11 @@
 *,
 ::after,
-::before {
+::before,
+:focus {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 body {
   background-color: #f5f5f5;
@@ -24,15 +26,22 @@ header {
   margin: 2rem 0 2rem;
 }
 
+input[type="text"] {
+  border-color: transparent;
+  background-color: transparent;
+  border-bottom: 4px solid #ff3c38;
+  margin-right: 1.4rem;
+}
 input[type="text"],
 .submit-btn {
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 0.8rem;
   /* border: none; */
 }
 .submit-btn {
-  background: red;
+  background: #f8333c;
   border: none;
+  border-radius: 5px;
   /* border-radius: 50%; */
 }
 .todo-container {
@@ -41,19 +50,50 @@ input[type="text"],
   align-items: center;
   /* min-width: 50vw; */
 }
-.todo-lists {
+.todo-list {
   min-width: 30%;
-  list-style-type: none;
+  list-style: none;
 }
-.todo-item {
-  /* list-style-type: none; */
-  margin: 1rem 0 0.4rem;
-  background-color: rebeccapurple;
-  padding: 0.8rem;
-  font-size: 1.3rem;
-  /*   color: black;
+
+.todo {
+  margin: 0.5rem;
+  background-color: #fcab10;
+  font-size: 1.5rem;
+  color: #0d0c22;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 1s ease; */
+  transition: all 1s ease;
+}
+.todo li {
+  flex: 1;
+  list-style-type: none;
+}
+.todo-item {
+  padding: 0rem 0.7rem;
+}
+/* Action buttons */
+.complete-btn,
+.edit-btn,
+.delete-btn {
+  font-size: 1.2rem;
+  border: none;
+  color: #fff;
+  padding: 0.92rem;
+}
+.complete-btn {
+  background-color: #44af69;
+}
+.delete-btn {
+  background-color: #a30015;
+}
+.edit-btn {
+  background-color: #357266;
+}
+
+/* disable clicking on icons */
+.fa-trash,
+.fa-pencil,
+.fa-check-circle {
+  pointer-events: none;
 }
