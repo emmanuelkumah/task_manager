@@ -7,6 +7,7 @@ const todoList = document.querySelector(".todo-list");
 //event handler
 submitBtn.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
+todoList.addEventListener("click", completeTodo);
 
 //functions
 const date = new Date();
@@ -57,5 +58,14 @@ function deleteTodo(e) {
   const item = e.target;
   if (item.classList.contains("delete-btn")) {
     item.parentElement.remove();
+  }
+}
+
+//mark a task a complete
+function completeTodo(e) {
+  const item = e.target;
+  if (item.classList.contains("complete-btn")) {
+    console.log(item.parentElement);
+    item.parentElement.classList.toggle("complete");
   }
 }

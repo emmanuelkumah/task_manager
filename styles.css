@@ -72,6 +72,11 @@ input[type="text"],
 .todo-item {
   padding: 0rem 0.7rem;
 }
+.complete {
+  text-decoration: line-through;
+  transition: all 0.5s ease;
+  opacity: 0.5;
+}
 /* Action buttons */
 .complete-btn,
 .edit-btn,
