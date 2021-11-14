@@ -18,7 +18,6 @@ header,
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
   min-height: 20vh;
 }
 header {
@@ -64,18 +63,21 @@ input[type="text"],
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  /* border: 3px solid red; */
 }
 .todo li {
+  /* display: flex; */
   flex: 1;
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 .todo-item {
   padding: 0rem 0.7rem;
 }
-.complete {
+.completed {
   text-decoration: line-through;
   transition: all 0.5s ease;
   opacity: 0.5;
+  display: flex;
 }
 /* Action buttons */
 .complete-btn,
@@ -100,5 +102,47 @@ input[type="text"],
 .fa-trash,
 .fa-pencil,
 .fa-check-circle {
+  pointer-events: none;
+}
+
+/* delete animation */
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0.5;
+}
+.filter-todo {
+  padding: 1rem;
+}
+/* select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.select {
+  position: relative;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+select {
+  color: #0d0c22;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff6f47;
+  cursor: pointer;
   pointer-events: none;
 }
